@@ -1,0 +1,21 @@
+<table>
+  <!-- Start: Заголовки столбцов -->
+  <thead>
+    <th *ngFor="let column of config?.columns">{{column?.title}}</th>
+  </thead>
+  <!-- End: Заголовки столбцов -->
+
+  <!-- Start: Данные -->
+  <tbody>
+    <tr *ngFor="let row of dataSource.getData() | async">
+      <td *ngFor="let value of row">{{value}}</td>
+    </tr>
+  </tbody>
+  <!-- End: Данные -->
+
+  <!-- Start: Аккумулятивные данные -->
+  <tfoot *ngIf="dataSource.total as total">
+    <td *ngFor="let column of config?.columns">{{total[column.key]}}</td>
+  </tfoot>
+  <!-- End: Аккумулятивные данные -->
+</table>

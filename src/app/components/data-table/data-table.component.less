@@ -1,0 +1,47 @@
+&:host {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+
+  thead {
+    background: #eceff1;
+
+    th {
+      padding: 10px;
+      font-family: 'Open Sans Semi Bold';
+      font-size: 14px;text-align: center;
+      text-align: center;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-of-type(even) {
+        background: #fff8e1;
+      }
+
+      td {
+        font-family: 'Open Sans Light';
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  tfoot {
+    background: #f5f5f5;
+
+    td {
+      padding: 10px;
+      font-family: 'Open Sans Regular';
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dataSourceUrl: 'assets/data.json',    // Url источника данных
+  pageSize: 10                          // Количество строк на странице
 };
 
 /*
